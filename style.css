@@ -7,6 +7,12 @@
     src: url(ressources/fonts/raleway/Raleway-Bold.ttf);
 }
 
+@font-face {
+    font-family: montserrat;
+    src: url(ressources/fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+/*----------GENERAL----------*/
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +20,8 @@
     text-decoration: none;
     font-family: roboto;
     scroll-behavior: smooth;
+    background-color: #1a1a1a;
+    color: #FFF;
 }
 
 body{
@@ -21,28 +29,90 @@ body{
     max-width: 1920px;
 }
 
-.title-container{
-    margin: 20px;
+/*----------HEADER----------*/
+.header-flexbox{
+    margin: 10px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
-#logo-title-container{
-    align-self: center;
-    height: 80px;
+/*----------TITLE BOX----------*/
+.title-flexbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo-title{
+    height: 60px;
     margin: 0 10px;
 }
 
-#divider-title-container{
-    align-self: center;
+#divider-title{
     width: 2px;
-    height: 70px;
-    background-color: #000;
+    height: 50px;
+    background-color: #FFF;
     border: none;
 }
 
-#text-title-container{
-    font-size: 38px;
-    font-family: raleway;
+#text-title{
+    font-size: 25px;
+    font-family: montserrat;
     margin: 0 10px;
+}
+
+/*----------NAVBAR----------*/
+.navbar-flexbox{
+    display: flex;
+    align-items: center;
+}
+
+#navbar{
+    font-family: montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar-options li{
+    font-size: 17px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#navbar-options li a{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+#navbar-options li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #2d96ff;
+    transition: width 0.25s ease-out;
+}
+
+#navbar-options li a:hover::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+#button-header{
+    margin:  0 33px;
+    padding: 8px 25px;
+    background-color: #2d96ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+#button-header:hover{
+    background-color: #005f96;
 }
