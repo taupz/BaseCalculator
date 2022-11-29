@@ -2,6 +2,10 @@
     font-family: roboto;
     src: url(ressources/fonts/roboto/Roboto-Regular.ttf);
 }
+@font-face {
+    font-family: raleway;
+    src: url(ressources/fonts/raleway/Raleway-Bold.ttf);
+}
 
 *{
     margin: 0;
@@ -15,9 +19,30 @@
 body{
     overflow-x: hidden;
     max-width: 1920px;
-    background-color: red;
 }
 
-h1{
-    color: blue;
+.title-container{
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logo-title-container{
+    align-self: center;
+    height: 80px;
+    margin: 0 10px;
+}
+
+#divider-title-container{
+    align-self: center;
+    width: 2px;
+    height: 70px;
+    background-color: #000;
+    border: none;
+}
+
+#text-title-container{
+    font-size: 38px;
+    font-family: raleway;
+    margin: 0 10px;
 }
