@@ -16,11 +16,16 @@
 *{
     margin: 0;
     padding: 0;
+    /*to modify padding without affecting width*/
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box;
+    /*to modify paffing witjout affecting width*/
     list-style: none;
     text-decoration: none;
     font-family: roboto;
     scroll-behavior: smooth;
-    background-color: #1a1a1a;
+    background-color: #005f96;
     color: #FFF;
 }
 
@@ -31,9 +36,18 @@ body{
 
 /*----------HEADER----------*/
 .header-flexbox{
-    margin: 10px;
+    /*REMOVE PADDING AND BG COLOR
+    padding: 5px;
+    background-color: blue;
+    REMOVE PADDING AND BG COLOR*/
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    background-color: #1a1a1a;
+}
+
+.header-flexbox *{
+    background-color: #1a1a1a;
 }
 
 /*----------TITLE BOX----------*/
@@ -118,4 +132,66 @@ body{
 #button-header:hover{
     background-color: #2d96ff;
     transform: scale(1.12);
+}
+
+/*----------CONVERSION ZONE----------*/
+.container-conversion-zone{
+    display: flex;
+    justify-content: center;
+}
+
+.conversion-zone{
+    height: 300px;
+    width: 1000px;
+    background-color: #1a1a1a;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.conversion-zone form{
+    width: 800px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.conversion-zone input{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFF;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+.conversion-zone input textarea:focus, input:focus{
+    outline: none; /*remove ugly borders set by chrome*/
+}
+
+#number-to-convert-input{
+    height: 60px;
+    width: 300px;
+}
+
+.base-input{
+    height: 60px;
+    width: 100px;
+    text-align: center;
+}
+
+#invert-bases-button{
+    height: 50px;
+    width: 50px;
+    background-color: #005f96;
+    border: none;
+    border-radius: 100%;
+    margin: 0 -50px;
 }
