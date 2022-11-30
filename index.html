@@ -25,21 +25,38 @@
                     <li><a href="#">Calculatrice binaire</a></li>
                     <li><a href="#">Méthodes de conversion</a></li>
             </nav>
-            <a href="https://youtube.com"><button id="button-header">Contact</button></a>
+            <a href="#"><button id="button-header">Contact</button></a>
         </div>
     </div>
-    <br>
     <div class="container-conversion-zone">
-        <div class="conversion-zone">
-            <form action="">
-                <input type="text" name="Number to convert" id="number-to-convert-input">
+        <div class="conversion-form">
+            <form action="" autocomplete="off">
+                <div class="conversion-zone">
+                    <div class="container-label-input">
+                        <label class="conversion-label"for="Number to convert">Nombre à convertir</label>
+                        <input id="number-to-convert-input" type="text" name="Number to convert" placeholder="...">
+                    </div>
+                    <div class="container-label-input">
+                        <label class="conversion-label"for="Number to convert">De la base</label>
+                        <input class="base-input" id="initial-base"type="text" name="Inital base" placeholder="...">
+                    </div>
 
-                <input class="base-input" id="initial-base"type="text" name="Inital base">
-                <button id="invert-bases-button">&lt;=&gt;</button>
-                <input class="base-input" id = "final-base" type="text" name="Conversion base">
+                    <button id="invert-bases-button" tabindex="-1">&lt; &gt;</button>
+
+                    <div class="container-label-input">
+                        <label class="conversion-label"for="Number to convert">Vers la base</label>
+                        <input class="base-input" id = "final-base" type="text" name="Conversion base" placeholder="...">
+                    </div>
+                </div>
+                <div class="buttons-zone">
+                    <button id="reset-button" type="reset" onclick="return false">↻</button>
+                    <button id="submit-button" type="submit" onclick="return false">Convertir</button>
+                </div>
             </form>
         </div>
     </div>
+    
+    <div class="test"></div>
 
     <script src="script.js"></script>
 </main>
