@@ -68,19 +68,19 @@ body{
 }
 
 #navbar{
-    font-family: montserrat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #navbar-options li{
-    font-size: 17px;
     display: inline-block;
     padding: 0 20px;
 }
 
 #navbar-options li a{
+    font-family: montserrat;
+    font-size: 15px;
     display: inline-block;
     position: relative;
     padding-bottom: 4px;
@@ -92,7 +92,7 @@ body{
     left: 0;
     bottom: 0;
     width: 0;
-    height: 1px;
+    height: 2px;
     background-color: #2d96ff;
     transition: width 0.25s ease-out;
 }
@@ -104,9 +104,11 @@ body{
 }
 
 #button-header{
+    font-family: montserrat;
+    font-size: 15px;
     margin:  0 33px;
-    padding: 8px 25px;
-    background-color: #2d96ff;
+    padding: 12px 30px;
+    background-color: #005f96;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -114,5 +116,5 @@ body{
 }
 
 #button-header:hover{
-    background-color: #005f96;
+    background-color: #2d96ff;
 }
