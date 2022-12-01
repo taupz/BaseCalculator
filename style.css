@@ -51,6 +51,31 @@ body{
     background-color: #1a1a1a;
 }
 
+/*----------SCROLL UP BUTTON----------*/
+#scroll-up-button{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    background-color: #989898;
+    box-shadow: 0px 0px 5px #000;
+    transition: all 0.3s ease 0s;
+}
+
+#scroll-up-button:hover{
+    transform:scale(1.1);
+}
+
+#scroll-up-button:active{
+    transform: scale(1);
+}
+
 /*----------TITLE BOX----------*/
 .title-flexbox{
     display: flex;
@@ -149,9 +174,10 @@ body{
     height: 300px;
     width: 1000px;
     background-color: #1a1a1a;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 15px 15px;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 1px 10px #FFF;
 }
 
 .conversion-form form{
@@ -301,7 +327,7 @@ body{
 
 .test{
     background-color: #1a1a1a;
-    margin: 0px 0px 0px 0px;
+    margin: -100px 0px 0px 0px;
     width: 100%;
     height: 800px;
 }
