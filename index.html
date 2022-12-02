@@ -9,55 +9,70 @@
     <link rel="shortcut icon" href="ressources/favicon.ico">
 </head>
 <body>
-    <button id="scroll-up-button" onclick="topFunction()">Top</button>
-    <div class="header-flexbox">
-        <a href=".">
-            <div class="title-flexbox">
-                <img id="logo-title"  src="ressources/images/calculator.png" alt="Logo calculatrice">
-                <hr id="divider-title">
-                <p id="text-title">Convertisseur de bases <br>Calculatrice binaire</p>
+    <div class="background">
+        <button id="scroll-up-button" onclick="topFunction()">Top</button>
+        <div class="header-flexbox">
+            <a href=".">
+                <div class="title-flexbox">
+                    <img id="logo-title"  src="ressources/images/calculator.png" alt="Logo calculatrice">
+                    <hr id="divider-title">
+                    <p id="text-title">Convertisseur de bases <br>Calculatrice binaire</p>
+                </div>
+            </a>
+            <div class="navbar-flexbox">
+                <nav id="navbar">
+                    <ul id="navbar-options">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Convertisseur de bases</a></li>
+                        <li><a href="#">Calculatrice binaire</a></li>
+                        <li><a href="#" onclick="goToMethodes()">Méthodes de conversion</a></li>
+                </nav>
+                <a href="https://github.com/taupz" target="_blank"><button id="button-header">Contact</button></a>
             </div>
-        </a>
-        <div class="navbar-flexbox">
-            <nav id="navbar">
-                <ul id="navbar-options">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Convertisseur de bases</a></li>
-                    <li><a href="#">Calculatrice binaire</a></li>
-                    <li><a href="#">Méthodes de conversion</a></li>
-            </nav>
-            <a href="#"><button id="button-header">Contact</button></a>
+        </div>
+        <div class="container-conversion-zone">
+            <div class="conversion-form">
+                <form action="" autocomplete="off">
+                    <div class="conversion-zone">
+                        <div class="container-label-input">
+                            <label class="conversion-label"for="Number to convert">Nombre à convertir</label>
+                            <input id="number-to-convert-input" type="text" name="Number to convert" placeholder="...">
+                        </div>
+                        <div class="container-label-input">
+                            <label class="conversion-label"for="Number to convert">De la base</label>
+                            <input class="base-input" id="initial-base"type="text" name="Inital base" placeholder="...">
+                        </div>
+
+                        <button id="invert-bases-button" onclick="swapValuesButton()" type="button" tabindex="-1">&lt; &gt;</button>
+
+                        <div class="container-label-input">
+                            <label class="conversion-label"for="Number to convert">Vers la base</label>
+                            <input class="base-input" id = "final-base" type="text" name="Conversion base" placeholder="...">
+                        </div>
+                    </div>
+                    <div class="result-and-buttons-zone">
+                        <div class="result-zone">
+                            <div id="result-infos">
+                                <p><span class="info-result" id="info-number">..</span> en base <span class="info-result" id="info-initial">..</span> vers la base <span class="info-result" id="info-final">...</span> :</p>
+                            </div>
+                            <div id="result-text">
+                                <p id="result-display">...</p>
+                            </div>
+                        </div>
+                        <div class="buttons-container">
+                            <button id="reset-button" onclick="resetInputs()" type="button">↻</button>
+                            <button id="submit-button" onclick="conversionProcess()" type="button">Convertir</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="test">
+            <h2>Méthodes de conversions</h2>
+            <p>Pour convertir blablabla</p>
         </div>
     </div>
-    <div class="container-conversion-zone">
-        <div class="conversion-form">
-            <form action="" autocomplete="off">
-                <div class="conversion-zone">
-                    <div class="container-label-input">
-                        <label class="conversion-label"for="Number to convert">Nombre à convertir</label>
-                        <input id="number-to-convert-input" type="text" name="Number to convert" placeholder="...">
-                    </div>
-                    <div class="container-label-input">
-                        <label class="conversion-label"for="Number to convert">De la base</label>
-                        <input class="base-input" id="initial-base"type="text" name="Inital base" placeholder="...">
-                    </div>
-
-                    <button id="invert-bases-button" tabindex="-1">&lt; &gt;</button>
-
-                    <div class="container-label-input">
-                        <label class="conversion-label"for="Number to convert">Vers la base</label>
-                        <input class="base-input" id = "final-base" type="text" name="Conversion base" placeholder="...">
-                    </div>
-                </div>
-                <div class="buttons-zone">
-                    <button id="reset-button" type="reset" onclick="return false">↻</button>
-                    <button id="submit-button" type="submit" onclick="return false">Convertir</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    
-    <div class="test"></div>
 
     <script src="script.js"></script>
 </main>
