@@ -16,11 +16,11 @@
 *{
     margin: 0;
     padding: 0;
-    /*to modify padding without affecting width*/
+    /*---to modify padding without affecting width---*/
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
      box-sizing: border-box;
-    /*to modify paffing witjout affecting width*/
+    /*-----------------------------------------------*/
     list-style: none;
     text-decoration: none;
     font-family: roboto;
@@ -166,6 +166,67 @@ body{
     transform: scale(1);
 }
 
+/*----------NEWS BUTTON----------*/
+#news-button{
+    cursor: pointer;
+    z-index: 99;
+    animation: bounce 2s infinite;
+    position: absolute;
+    left: 290px;
+    top: 130px;
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 5px 13px;
+    font-size: 10px;
+    clip-path: circle(7% at 6% 73%);
+    transition:  all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+}
+
+#news-button span{
+    font-size: 35px;
+    color: #2d96ff;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+}
+
+#news-button h1{
+    font-weight: normal;
+    font-family: roboto;
+    color: #2d96ff;
+    font-size: 17px;
+}
+
+#news-button li{
+    font-family: roboto;
+    color: #000;
+    font-size: 14px;
+}
+
+#news-button:hover{
+    clip-path : circle(75%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #000;
+    animation: none;
+}
+
+#news-button:hover span{
+    opacity: 0;
+}
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 /*----------CONVERSION ZONE----------*/
 .result-and-buttons-zone{
     background-color: transparent;
@@ -183,6 +244,7 @@ body{
 }
 
 .conversion-form{
+    z-index: 10;
     height: 300px;
     width: 1000px;
     background-color: #1a1a1a;
@@ -359,11 +421,18 @@ body{
 
 /*----------SUITE DU SITE----------*/
 
-.test{
+.methods-container{
+    display: flex;
+    justify-content: center;
+}
+
+.methods-zone{
+    z-index: 5;
     background-color: #1a1a1a;
     margin: -100px 0px 0px 0px;
-    width: 100%;
+    width: 1400px;
     height: 800px;
-    padding: 140px 0px 0px 0px; 
+    border-radius: 10px;
+    padding: 140px 20px 0px 20px; 
     display: block;
 }

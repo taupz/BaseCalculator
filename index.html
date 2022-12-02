@@ -11,6 +11,13 @@
 <body>
     <div class="background">
         <button id="scroll-up-button" onclick="topFunction()">Top</button>
+        <div id="news-button">
+            <h1>Conversions actuellement supportées :</h1>
+            <ul>
+                <li>- Décimal vers binaire (10 vers 2)</li>
+            </ul>
+            <span>&#8505;</span>
+        </div>
         <div class="header-flexbox">
             <a href=".">
                 <div class="title-flexbox">
@@ -53,14 +60,14 @@
                     <div class="result-and-buttons-zone">
                         <div class="result-zone">
                             <div id="result-infos">
-                                <p><span class="info-result" id="info-number">..</span> en base <span class="info-result" id="info-initial">..</span> vers la base <span class="info-result" id="info-final">...</span> :</p>
+                                <p id="infos-p">Résultat</p>
                             </div>
                             <div id="result-text">
                                 <p id="result-display">...</p>
                             </div>
                         </div>
                         <div class="buttons-container">
-                            <button id="reset-button" onclick="resetInputs()" type="button">↻</button>
+                            <button id="reset-button" onclick="resetInputsButton()" type="button">↻</button>
                             <button id="submit-button" onclick="conversionProcess()" type="button">Convertir</button>
                         </div>
                     </div>
@@ -68,10 +75,13 @@
             </div>
         </div>
         
-        <div class="test">
-            <h2>Méthodes de conversions</h2>
-            <p>Pour convertir blablabla</p>
+        <div class="methods-container">
+            <div class="methods-zone">
+                <h2>Méthodes de conversions</h2>
+                <p>Pour convertir blablabla</p>
+            </div>
         </div>
+            
     </div>
 
     <script src="script.js"></script>

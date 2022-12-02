@@ -20,19 +20,42 @@ function topFunction(){
     document.documentElement.scrollTop = 0;
 }
 
+/*----------NEWS BUTTON----------*/
+let news_overd = document.getElementById("news-button")
+news_overd.addEventListener("mouseenter", function(event){
+    event.target.style.animation = 'none';
+    console.log('Hello')
+}, false);
+
 function goToMethodes(){
     document.documentElement.scrollTop = 400;
     console.log("test");
 }
 
-function resetInputs(){
+function setInfos(a, b, c){
+    document.getElementById("infos-p").style.color = "#989898";
+    document.getElementById("result-display").style.color = "#FFF";
+
+    document.getElementById("infos-p").innerHTML = a + " en base " + b + " vers la base " + c + ":";
+}
+
+function resetInfos(){
+    document.getElementById("infos-p").style.color = "#989898";
+    document.getElementById("result-display").style.color = "#FFF";
+
+    document.getElementById("infos-p").innerHTML = "Résultat";
+}
+
+function resetInputsButton(){
+    var input_value = document.getElementById("number-to-convert-input").value;
+    var initial_base = document.getElementById("initial-base").value;
+    var final_base = document.getElementById("final-base").value;
+
     document.getElementById("number-to-convert-input").value = '';
     document.getElementById("initial-base").value = '';
     document.getElementById("final-base").value = '';
 
-    document.getElementById("info-number").innerHTML = '...';
-    document.getElementById("info-initial").innerHTML = '...';
-    document.getElementById("info-final").innerHTML = '...';
+    resetInfos()
 
     document.getElementById("result-display").innerHTML = '...';
 }
@@ -47,9 +70,14 @@ function conversionProcess(){
     var final_result = '';
 
     /*manage conversion info*/
-    document.getElementById("info-number").innerHTML = input_value;
-    document.getElementById("info-initial").innerHTML = initial_base;
-    document.getElementById("info-final").innerHTML = final_base;
+    if(input_value === '' || initial_base === '' || final_base === ''){
+        document.getElementById("infos-p").innerHTML = "Entrez toutes les valeurs de conversion"
+        document.getElementById("infos-p").style.color = "red"
+        document.getElementById("result-display").style.color = "red"
+    }
+    else{
+        setInfos(input_value, initial_base, final_base)
+    }
 
     /*---------------Calculation part---------------*/
 
