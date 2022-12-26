@@ -82,13 +82,8 @@ function conversionProcess(){
     /*---------------Calculation part---------------*/
 
     /*--What conversion are we dealing with ?--*/
-    /*2 to 10*/
-    if(initial_base === "2" && final_base === "10"){
-
-    }
-
     /*10 to 2*/
-    else if(initial_base === "10" && final_base === "2"){
+    if(initial_base === "10" && final_base === "2"){
         number_to_divide = input_value;
 
         while(number_to_divide != 0){
@@ -105,6 +100,14 @@ function conversionProcess(){
             if(final_result.charAt(0) === '0'){
                 final_result = final_result.substring(1,final_result.length);
             }
+        }
+    }
+    else{
+        if(! (input_value === '' || initial_base === '' || final_base === '')){
+            document.getElementById("infos-p").innerHTML = "Conversion non supportée";
+            document.getElementById("infos-p").style.color = "red";
+            document.getElementById("result-display").style.color = "red";
+            document.getElementById("news-button").style.animation = 'bounce 2s infinite';
         }
     }
 
